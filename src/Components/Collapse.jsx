@@ -1,21 +1,22 @@
 import "../style/style.css";
+import "../style/Collapse.css"
 
-export default function Collapse({ sousTitre, paraCollapse }) {
+export default function Collapse({ collTitle, collText }) {
   return (
     <div className="container-collapse">
       <div className="card-collapse">
         <h4 className="titre-collapse">
-          {sousTitre}{" "}
+          {collTitle}{" "}
           <span>
             {" "}
-            <i class="fa-solid fa-chevron-up"></i>
+            <i className="fa-solid fa-chevron-up"></i>
           </span>
           <span>
             {" "}
-            <i class="fa-solid fa-chevron-down"></i>
+            <i className="fa-solid fa-chevron-down"></i>
           </span>
         </h4>
-        <p className="para-collapse">{paraCollapse}</p>
+        <p className="para-collapse">{collText}</p>
       </div>
     </div>
   );

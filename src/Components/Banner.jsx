@@ -1,11 +1,12 @@
+import "../style/Banner.css"
+import "../style/style.css"
 export default function Banner({ imgBanner, textBanner }) {
   return (
-    <div className="container-banner">
-      <p className="banner-img">
-        <img src={imgBanner} alt="img banner" className="img-banner" />
-      </p>
-      <p className="bg-dark-banner"></p>
-      <p className="text-banner">{textBanner}</p>
+    <div className="image-container">
+        <img src={imgBanner} alt="site kasa" className="image"/>
+        <div className="text-overlay">
+          <p>{textBanner}</p>
+        </div>
     </div>
   );
 }

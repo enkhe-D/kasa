@@ -1,156 +1,20 @@
 /* color: #FF6060 */
 /* color: #F6F6F6 */
 /*color: #C4C4C4*/
-/* gradient-color : #FFFFFF 0 % #000000 50 % */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
-body {
-  margin: 0;
-  padding: 0;
+*{
+  margin:0;
+  padding:0;
   box-sizing: border-box;
-  background: #ffffff;
-}
-
-header {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-
-p.logo img {
-  width: 12%;
-}
-
-.logo {
-  width: 74%;
-}
-
-/******* BANNER *******/
-.container-banner {
-  width: 90%;
-  margin: auto;
-  position: relative;
-}
-
-.img-banner {
-  border-radius: 25px;
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-}
-
-.text-banner {
-  position: absolute;
-  top: 11px;
-  left: 328px;
-  font-size: 5rem;
-  color: white;
-}
-
-.bg-dark-banner {
-  position: absolute;
-  top: -17px;
-  width: 100%;
-  height: 300px;
-  background-color: black;
-  opacity: 0.3;
-  border-radius: 25px;
-}
-
-/******* NAVBAR *******/
-.container-navbar {
-  display: flex;
-  gap: 56px;
-  font-size: 1.5rem;
-  color: #ff6060;
-}
-
-.container-navbar a {
-  color: #ff6060;
-  text-decoration: none;
-}
-.container-navbar a:hover {
-  text-decoration: underline;
-}
-
-/******* ERREUR *******/
-.container-erreur {
-  text-align: center;
-  color: #ff6060;
-  margin-top: 170px;
-}
-
-.para-erreur {
-  line-height: 6;
-  font-size: 1.5rem;
-}
-
-.btn-erreur {
-  border: none;
-  background-color: white;
-  color: #ff6060;
-  text-decoration: underline;
-  margin: 66px 0px 79px 0;
-}
-
-/******* CARD *******/
-.container-card {
-  background-color: #f7f7f7;
-  border-radius: 25px;
-  width: 90%;
-  margin: 0 auto;
   list-style-type: none;
-  padding: 31px 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.item-card {
-  width: 415px;
-  height: 415px;
-  border: 1px solid;
-  border-radius: 10px;
-  background: linear-gradient(
-    0deg,
-    rgb(0, 0, 0) -35%,
-    rgba(255, 96, 96, 1) 100%
-  );
-  margin: 40px;
-  color: white;
+body{
+  width: 1440px;
+  margin: auto;
 }
-/******* COLLAPSE *******/
-.card-collapse {
-  border: 1px solid black;
-  width: 500px;
-  height: 200px;
-  background-color: #f7f7f7;
-  border-radius: 10px;
-}
-
-.titre-collapse {
-  border: 1px solid black;
-  width: 500px;
-  border-radius: 10px;
-  margin: 0;
-  padding: 5px 0;
-}
-/******* FOOTER *******/
-footer {
-  background-color: black;
-  color: white;
-  text-align: center;
-}
-
-.footer-container {
-  padding-top: 31px;
-}
-
-.imgFooter {
-  width: 71px;
-}
-
-.text-footer {
-  padding-bottom: 31px;
-  margin-bottom: 0;
+a{
+  text-decoration: none;
 }

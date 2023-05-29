@@ -1,0 +1,16 @@
+/******* COLLAPSE *******/
+.card-collapse {
+    border: 1px solid black;
+    width: 500px;
+    height: 200px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+  }
+  
+  .titre-collapse {
+    border: 1px solid black;
+    width: 500px;
+    border-radius: 10px;
+    margin: 0;
+    padding: 5px 0;
+  }

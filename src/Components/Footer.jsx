@@ -1,4 +1,5 @@
 import "../style/style.css";
+import "../style/Footer.css";
 
 export default function Footer({ imgFooter }) {
   return (
