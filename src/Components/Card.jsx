@@ -4,7 +4,7 @@ import "../style/Card.css";
 
 export default function Card({ cardId, cardTitle, cardCover, cardCoverAlt }) {
   return (
-    <article className="card">
+    <article className="card" key="id">
       <Link to={`/logement/${cardId}`}>
         <h2 className="card-title">{cardTitle}</h2>
         <img src={cardCover} alt={cardCoverAlt} className="card-image" />

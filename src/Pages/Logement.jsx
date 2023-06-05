@@ -1,8 +1,9 @@
 import { useParams } from "react-router-dom";
 import Collapse from "../Components/Collapse";
-import Tag from "../Components/Tag";
 import datasKasa from "../datas/datasKasa.json"
+import Carrousel from "../Components/Carrousel";
 import "../style/style.css";
+import "../style/Tag.css"
 
 export default function Logement() {
   const {id} = useParams()
@@ -10,15 +11,20 @@ export default function Logement() {
   if(!logement){
     return <p>Logement non trouvé</p>;
   }
-  const {pictures, title, location, tags, description,equipments} = logement;
+  const {pictures, title, location, tags, description , equipments} = logement;
   return (
-    <div>
-      <h2>Fiche Logement</h2>
-      <Collapse
-        collTitle={equipments}
-        collText={description}
-      />
-      <Tag />
-    </div>
+    <>
+    <Carrousel images={pictures} />
+    <Collapse collTitle={title}/>
+    <Collapse CollLocation={location}/>
+    <div className="container-tag">
+        {tags.map((tag, tagId) => (
+          <div className="paraTag" key={'tag-'+ tagId}>
+            {tag}
+          </div>
+        ))}
+      </div>
+      <Collapse collText={description}/>
+    </>
   );
 }

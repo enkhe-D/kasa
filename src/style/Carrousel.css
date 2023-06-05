@@ -1,0 +1,26 @@
+.container-carrousel{
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+}
+
+.imgCarrousel{
+    border-radius: 25px;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    position: relative;
+}
+.itemCarrouselLeft, .itemCarrouselRight{
+    position:absolute;
+    font-size: 4rem;
+    color:whitesmoke
+}
+.itemCarrouselLeft{
+    left:13%;
+    z-index: 1;
+}
+
+.itemCarrouselRight{
+    left: 85%;
+}

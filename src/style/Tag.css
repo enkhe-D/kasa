@@ -1,0 +1,12 @@
+.container-tag{
+    display: flex;
+    gap:15px;
+}
+.paraTag{
+    border-radius:10px;
+    background-color: #FF6060;
+    color:whitesmoke;
+    padding:5px;
+    margin:15px 0;
+
+}

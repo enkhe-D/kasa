@@ -1,23 +1,27 @@
 import "../style/style.css";
 import "../style/Collapse.css"
+import { useState } from "react";
 
-export default function Collapse({ collTitle, collText }) {
+export default function Collapse({ collTitle, collText, CollLocation, collEquipement }) {
+  const [Visible, setVisible] = useState(false)
+
+  const toggleCollapse = () =>{
+    setVisible(!Visible)
+  }
+
   return (
+    <>
+    <h2>{collTitle}</h2>
+    <p>{CollLocation}</p>
+    
     <div className="container-collapse">
-      <div className="card-collapse">
-        <h4 className="titre-collapse">
-          {collTitle}{" "}
-          <span>
-            {" "}
-            <i className="fa-solid fa-chevron-up"></i>
-          </span>
-          <span>
-            {" "}
-            <i className="fa-solid fa-chevron-down"></i>
-          </span>
-        </h4>
-        <p className="para-collapse">{collText}</p>
-      </div>
+        <p className="titre-collapse" onClick={toggleCollapse}>Description
+        {Visible ? <i className="fa-solid fa-chevron-down"></i> : <i className="fa-solid fa-chevron-up"></i>}
+        </p>
+      {Visible && (
+        <p className="text-Collapse">{collText}</p>
+      )}
     </div>
+    </>
   );
 }
