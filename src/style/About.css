@@ -1,0 +1,8 @@
+.container-collapse-about{
+    display: flex;
+    flex-wrap: wrap;
+}
+.container-collapse-about .items-collapse{
+    width: 80%;
+    margin:0 auto 50px
+}

@@ -1,27 +1,35 @@
+import React, { useState } from "react";
 import "../style/style.css";
-import "../style/Collapse.css"
-import { useState } from "react";
+import "../style/Collapse.css";
 
-export default function Collapse({ collTitle, collText, CollLocation, collEquipement }) {
-  const [Visible, setVisible] = useState(false)
+export default function Collapse({ dropDown, collapseContent }) {
+  const [visible, setVisible] = useState(false);
 
-  const toggleCollapse = () =>{
-    setVisible(!Visible)
-  }
+  const toggleCollapse = () => {
+    setVisible(!visible);
+  };
 
   return (
     <>
-    <h2>{collTitle}</h2>
-    <p>{CollLocation}</p>
-    
-    <div className="container-collapse">
-        <p className="titre-collapse" onClick={toggleCollapse}>Description
-        {Visible ? <i className="fa-solid fa-chevron-down"></i> : <i className="fa-solid fa-chevron-up"></i>}
+      <div className="items-collapse">
+        <p className="item titre-collapse" onClick={toggleCollapse}>
+          {dropDown}
+          <i className={`fa-solid fa-chevron-${visible ? "up" : "down"}`}></i>
         </p>
-      {Visible && (
-        <p className="text-Collapse">{collText}</p>
-      )}
-    </div>
+        {visible && (
+          <div className="item text-collapse">
+            {Array.isArray(collapseContent) ? (
+              <ul>
+                {collapseContent.map((item, indexCollapse) => (
+                  <li key={indexCollapse}>{item}</li>
+                ))}
+              </ul>
+            ) : (
+              <p>{collapseContent}</p>
+            )}
+          </div>
+        )}
+      </div>
     </>
   );
 }

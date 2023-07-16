@@ -3,10 +3,11 @@ header{
     justify-content: space-between;
     align-items: center;
     margin: 25px 0 100px;
+    height: 68px;
 }
 
 .logo{
-    width: 18%;
+    width: 17%;
 }
 
 .logo img{
