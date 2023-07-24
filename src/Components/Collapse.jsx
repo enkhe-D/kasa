@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import "../style/style.css";
-import "../style/Collapse.css";
+import "../styles/style.css";
 
 export default function Collapse({ dropDown, collapseContent }) {
   const [visible, setVisible] = useState(false);
@@ -11,13 +10,13 @@ export default function Collapse({ dropDown, collapseContent }) {
 
   return (
     <>
-      <div className="items-collapse">
-        <p className="item titre-collapse" onClick={toggleCollapse}>
+      <div className="item-collapse">
+        <p className="collapse-content1" onClick={toggleCollapse}>
           {dropDown}
           <i className={`fa-solid fa-chevron-${visible ? "up" : "down"}`}></i>
         </p>
         {visible && (
-          <div className="item text-collapse">
+          <div className="collapse-content2">
             {Array.isArray(collapseContent) ? (
               <ul>
                 {collapseContent.map((item, indexCollapse) => (

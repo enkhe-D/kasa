@@ -1,17 +1,16 @@
 import img404 from "../assets/images/404.png";
-import "../style/style.css";
+import "../styles/style.css";
 
 export default function Error() {
   return (
-    <div className="container-erreur">
-      <p className="img-404">
+    <main>
+      <p className="img-error">
         <img src={img404} alt="erreur 404" />
       </p>
-      <p className="para-erreur">
+      <p className="paragraphe-error">
         Oups! La page que vous demandez n'existe pas.
       </p>
-
-      <button className="btn-erreur">Retrouner sur la page d'accueil</button>
-    </div>
+      <button className="btn-error">Retourner sur la page d'accueil</button>
+    </main>
   );
 }

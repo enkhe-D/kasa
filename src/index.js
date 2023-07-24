@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "../src/style/style.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
@@ -9,6 +8,7 @@ import Footer from "./Components/Footer";
 import Error from "./Pages/Error";
 import Logement from "./Pages/Logement";
 import imgFooter from "./assets/images/logo-footer.png";
+import "../src/styles/style.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

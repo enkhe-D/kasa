@@ -3,8 +3,7 @@ import Collapse from "../Components/Collapse";
 import datasKasa from "../datas/datasKasa.json";
 import Carrousel from "../Components/Carrousel";
 import Rating from "../Components/Rating";
-import "../style/style.css";
-import "../style/Tag.css";
+import "../styles/style.css";
 
 export default function Logement() {
   const { id } = useParams();
@@ -26,33 +25,32 @@ export default function Logement() {
   } = logement;
 
   return (
-    <>
+    <main>
       <Carrousel images={pictures} />
-      <div className="container-infos">
-        <div className="info-appart">
-          <h2 className="item-appart">{title}</h2>
-          <p className="item-appart">{location}</p>
-        </div>
 
-        <div className="info-user">
-          <p className="name-host">{host.name}</p>
-          <img src={host.picture} alt={host.name} className="img-host" />
-          <Rating rating={rating} />
-        </div>
+      <div className="appartement-info">
+        <h2>{title}</h2>
+        <p>{location}</p>
       </div>
 
-      <div className="container-tag">
+      <div className="user-info">
+        <div className="user">
+          <p>{host.name}</p>
+          <img src={host.picture} alt={host.name} />
+        </div>
+        <Rating rating={rating} />
+      </div>
+
+      <div className="tag">
         {tags.map((tag, tagId) => (
-          <div className="paraTag" key={"tag-" + tagId}>
-            {tag}
-          </div>
+          <span key={"tag-" + tagId}>{tag}</span>
         ))}
       </div>
 
-      <div className="container-collapse">
+      <div className="collapses">
         <Collapse dropDown="Description" collapseContent={description} />
         <Collapse dropDown="Equipements" collapseContent={equipments} />
       </div>
-    </>
+    </main>
   );
 }

@@ -1,10 +1,9 @@
 import { NavLink } from "react-router-dom";
-import "../style/style.css";
-import "../style/Navbar.css";
+import "../styles/style.css";
 
 export default function Navbar() {
   return (
-    <div className="container-navbar">
+    <div className="navbar">
       <NavLink className="nav" to="/">
         Accueil
       </NavLink>

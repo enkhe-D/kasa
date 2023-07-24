@@ -1,5 +1,4 @@
-import "../style/style.css";
-import "../style/Footer.css";
+import "../styles/style.css";
 
 export default function Footer({ imgFooter }) {
   return (
@@ -7,7 +6,7 @@ export default function Footer({ imgFooter }) {
       <p className="footer-container">
         <img src={imgFooter} alt="img footer" className="imgFooter" />
       </p>
-      <p className="text-footer">2020 Kasa. All rights reserved</p>
+      <p className="text-footer"> &copy; 2020 Kasa. All rights reserved</p>
     </footer>
   );
 }

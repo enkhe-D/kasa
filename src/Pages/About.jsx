@@ -1,14 +1,13 @@
 import Banner from "../Components/Banner";
 import Collapse from "../Components/Collapse";
 import montagneImg from "../assets/images/montagne.png";
-import "../style/style.css";
-import "../style/About.css";
+import "../styles/style.css";
 
 export default function About() {
   return (
-    <>
+    <main>
       <Banner imgBanner={montagneImg} />
-      <div className="container-collapse-about">
+      <div className="collapse-about">
         <Collapse
           dropDown="Fiablitié"
           collapseContent="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes."
@@ -26,6 +25,6 @@ export default function About() {
           collapseContent="La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes."
         />
       </div>
-    </>
+    </main>
   );
 }

@@ -1,5 +1,4 @@
-import "../style/style.css";
-import "../style/Carrousel.css";
+import "../styles/style.css";
 import { useState } from "react";
 
 export default function Carrousel({ images }) {
