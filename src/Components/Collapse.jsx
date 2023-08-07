@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/style.css";
+import "../styles/Collapse.css";
 
 export default function Collapse({ dropDown, collapseContent }) {
   const [visible, setVisible] = useState(false);

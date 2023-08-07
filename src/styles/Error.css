@@ -1,0 +1,23 @@
+.error{
+    color: var(--primaryColor);
+    font-size: 18px;
+    text-align: center;
+}
+
+.error p:nth-child(1){
+    margin: 160px 0 0px;
+}
+
+.error p:nth-child(2){
+    margin:25px 0 150px;
+    font-weight: 500;
+    line-height: 25.67px;
+}
+
+.error img{
+    width: 198px;
+}
+
+/* @media screen and (min-width:) {
+    
+} */

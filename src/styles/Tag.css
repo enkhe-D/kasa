@@ -1,0 +1,19 @@
+.tag{
+    color: var(--secondaryColor);
+    margin: 10px 0;
+    order: 1;
+}
+
+.tag span{
+    border-radius: 6px;
+    padding: 5px 10px;
+    margin-right: 10px;
+    text-align: center;
+    font-size: 10px;
+    background-color: var(--primaryColor);
+}
+
+@media screen and (min-width:1024px){
+    .tage{order:2;
+    }
+}

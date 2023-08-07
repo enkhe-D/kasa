@@ -1,12 +1,15 @@
 import "../styles/style.css";
+import "../styles/Footer.css";
 
 export default function Footer({ imgFooter }) {
   return (
     <footer>
-      <p className="footer-container">
-        <img src={imgFooter} alt="img footer" className="imgFooter" />
-      </p>
-      <p className="text-footer"> &copy; 2020 Kasa. All rights reserved</p>
+      <div className="footer">
+        <p>
+          <img src={imgFooter} alt="img footer" />
+        </p>
+        <p>&copy; 2020 Kasa. All rights reserved</p>
+      </div>
     </footer>
   );
 }

@@ -1,4 +1,5 @@
 import "../styles/style.css";
+import "../styles/Tag.css";
 
 export default function Tag({ tagId, tag }) {
   return (

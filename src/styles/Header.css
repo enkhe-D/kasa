@@ -1,0 +1,23 @@
+header{
+    display: var(--flex);
+    justify-content: var(--spaceBetween);
+    align-items: var(--aligneItems);
+    margin:15px auto;
+    width: 89%;
+}
+
+.logo{
+    width: 26%;
+}
+
+@media screen and (min-width:1024px) {
+
+    header{
+        margin: 46px auto;
+        width: 98%
+    }
+    
+    .logo{
+        width: 26%;
+    }
+}

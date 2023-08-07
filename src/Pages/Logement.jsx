@@ -4,6 +4,8 @@ import datasKasa from "../datas/datasKasa.json";
 import Carrousel from "../Components/Carrousel";
 import Rating from "../Components/Rating";
 import "../styles/style.css";
+import "../styles/Collapse.css";
+import "../styles/Tag.css";
 
 export default function Logement() {
   const { id } = useParams();
@@ -33,18 +35,20 @@ export default function Logement() {
         <p>{location}</p>
       </div>
 
-      <div className="user-info">
-        <div className="user">
-          <p>{host.name}</p>
-          <img src={host.picture} alt={host.name} />
+      <div className="flex-mobile">
+        <div className="user-info">
+          <div className="user">
+            <p>{host.name}</p>
+            <img src={host.picture} alt={host.name} />
+          </div>
+          <Rating rating={rating} />
         </div>
-        <Rating rating={rating} />
-      </div>
 
-      <div className="tag">
-        {tags.map((tag, tagId) => (
-          <span key={"tag-" + tagId}>{tag}</span>
-        ))}
+        <div className="tag">
+          {tags.map((tag, tagId) => (
+            <span key={"tag-" + tagId}>{tag}</span>
+          ))}
+        </div>
       </div>
 
       <div className="collapses">
