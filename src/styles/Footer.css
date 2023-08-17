@@ -1,21 +1,18 @@
 footer{
-    background-color: black;
     color: var(--secondaryColor);
+    background-color: black;
+    margin-top:51px;
     padding: 20px;
-}
-    
-footer p{
-    text-align: center;
-    font-size: 12px;
 }
 
 footer img{
-    width: 122px;
+    width: 75px;
+}
+
+footer p {
+    font-size: 12px;
+    text-align: center;
 }
 
 @media screen  and (min-width:1024px){
-    
-    footer{
-        margin:0;
-    }
 }

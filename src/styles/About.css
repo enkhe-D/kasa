@@ -1,0 +1,7 @@
+.collapse-about{
+    position: var(--positionRelative);
+}
+
+.collapse-about .item-collapse{
+    position: var(--positionAbsolute);
+}

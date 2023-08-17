@@ -16,6 +16,22 @@ html{
   --positionAbsolute: absolute;
 
   --objectFit: cover;
+
+  --fontSize12: 12px;
+  --fontSize13: 13px;
+  --fontSize14: 14px;
+  --fontSize16: 16px;
+  --fontSize18: 18px;
+  --fontSize24: 24px;
+  --fontSize36: 36px;
+  --fontSize48: 48px;
+
+  --fontWeight4: 400px;
+  --fontWeight5: 500px;
+
+  --line-height1: 17.11px;
+  --line-height2: 25.67px;
+  --line-height3: 34.22px;
 }
 
 *{

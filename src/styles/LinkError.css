@@ -1,0 +1,6 @@
+.link-error{
+    font-size: 14px;
+    margin-bottom: 80px;
+    color: var(--primaryColor);
+    text-decoration: underline;
+}

@@ -3,7 +3,7 @@
     position: var(--positionRelative);
 }
 
-.banner p, 
+.banner p,
 .banner::before{
     position: var(--positionAbsolute);
 }
@@ -13,18 +13,12 @@
 }
 
 .banner p{
-    font-size: 24px;
+    width: 226px;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size: var(--fontSize24);
     color: var(--secondaryColor);
-    left: 10%;
-}
-
-.banner p:nth-child(2){
-    top: 25px;
-    
-}
-
-.banner p:nth-child(3){
-    top:52px
 }
 
 .banner::before {
@@ -50,30 +44,51 @@
     object-fit: var(--objectFit);
 }
 
-@media screen and (min-width:768px) {
-    .banner, .banner::before, .banner img {
-        height: 225px;
+
+@media screen and (min-width:768px){
+    .banner, 
+    .banner::before, 
+    .banner img {
+        height: 169px;
     }
 
-    .banner p:nth-child(2) {
-        top: 40%;
-        left: 50%;
-        width: 100%;
-        font-size: 38px;
-        text-align: center;
-        transform: translate(-50%, -50%)
+    .banner img, 
+    .banner::before{
+        border-radius: var(--borderRadiusMiddle);
     }
 
-    .banner p:nth-child(3) {
-        top: 60%;
-        left: 50%;
+    .banner p{
+        font-size: 24px;
+        white-space: nowrap;
         width: 100%;
-        font-size: 38px;
         text-align: center;
-        transform: translate(-50%, -50%)
     }
 }
 
-@media screen and (min-width:1024px) {
+@media screen and (min-width:1024px){
+    .banner, 
+    .banner::before, 
+    .banner img {
+        height: 223px;
+    }
+
+    .banner img, .banner::before{
+        border-radius: var(--borderRadiusMiddle);
+    }
+
+    .banner p{
+        font-size: 38px;
+    }
+}
+
+@media screen and (min-width:1440px){
+    .banner, 
+    .banner::before, 
+    .banner img {
+        height: 223px;
+    }
     
+    .banner p{
+        font-size: 48px;
+    }
 }

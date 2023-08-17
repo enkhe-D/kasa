@@ -2,6 +2,10 @@
     color: var(--secondaryColor);
     margin: 10px 0;
     order: 1;
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
 }
 
 .tag span{

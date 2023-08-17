@@ -2,8 +2,8 @@ header{
     display: var(--flex);
     justify-content: var(--spaceBetween);
     align-items: var(--aligneItems);
-    margin:15px auto;
-    width: 89%;
+    margin:0 auto;
+    padding:15px;
 }
 
 .logo{
@@ -13,7 +13,7 @@ header{
 @media screen and (min-width:1024px) {
 
     header{
-        margin: 46px auto;
+        margin: 14px auto;
         width: 98%
     }
     

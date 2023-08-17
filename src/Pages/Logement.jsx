@@ -1,18 +1,31 @@
-import { useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import Collapse from "../Components/Collapse";
 import datasKasa from "../datas/datasKasa.json";
 import Carrousel from "../Components/Carrousel";
 import Rating from "../Components/Rating";
+import Tag from "../Components/Tag";
 import "../styles/style.css";
 import "../styles/Collapse.css";
 import "../styles/Tag.css";
+import "../styles/fail-logement.css";
 
 export default function Logement() {
   const { id } = useParams();
   const logement = datasKasa.find((logement) => logement.id === id);
 
+  /*   if (!logement) {
+    return <Navigate to="/Error" />;
+  } */
+
   if (!logement) {
-    return <p>Logement non trouvé</p>;
+    return (
+      <main className="fail-logement">
+        <p>Logement non trouvé</p>
+        <NavLink to="/" className="link-error">
+          Retourner sur la page d'accueil
+        </NavLink>
+      </main>
+    );
   }
 
   const {
@@ -46,7 +59,7 @@ export default function Logement() {
 
         <div className="tag">
           {tags.map((tag, tagId) => (
-            <span key={"tag-" + tagId}>{tag}</span>
+            <Tag key={tagId} tag={tag} />
           ))}
         </div>
       </div>

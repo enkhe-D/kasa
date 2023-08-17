@@ -8,9 +8,6 @@
     position: var(--positionAbsolute);
 }
 
-/* .arrows, 
-.carrousel p{
-} */
 
 .carrousel, 
 .carrousel img{
@@ -22,7 +19,8 @@
     display: var(--flex);
     justify-content: var(--spaceBetween);
     top: 50%;
-    left: 2%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 1.5rem;
     margin: auto;
     width: 96%;
@@ -35,7 +33,9 @@
 
 .carrousel p{
     bottom: 0;
-    left: 84%;
+    white-space: nowrap;
+    width:100%;
+    text-align: end;
     margin:0;
     padding:5px;
     text-decoration: none;
@@ -43,13 +43,23 @@
 }
 
 @media screen and (min-width:768px){
-    .carrousel p{
-        left: 94%;
+    .carrousel, .carrousel img {
+        height: 225px;
+    }
+
+    .arrows span{
+        font-size: 2rem;
     }
 }
 
 @media screen and (min-width:1024px){
-    .carrousel p{
-        left: 96%;
+    .carrousel, .carrousel img {
+        height: 320px;
+    }
+}
+
+@media screen and (min-width:1440px){
+    .carrousel, .carrousel img {
+        height: 415px;
     }
 }

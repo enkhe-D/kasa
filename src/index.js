@@ -8,7 +8,7 @@ import Footer from "./Components/Footer";
 import Error from "./Pages/Error";
 import Logement from "./Pages/Logement";
 import imgFooter from "./assets/images/logo-footer.png";
-import "../src/styles/style.css";
+import "./styles/style.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

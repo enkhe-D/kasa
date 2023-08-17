@@ -8,8 +8,7 @@ export default function Home() {
   return (
     <main>
       <Banner
-        textBanner1="Chez vous,"
-        textBanner2=" partout et ailleurs"
+        textBanner1="Chez vous, partout et ailleurs"
         imgBanner={imageBanner}
       />
       <section className="cards">

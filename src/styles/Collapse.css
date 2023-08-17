@@ -1,5 +1,7 @@
-.item-collapse{
-    margin: 10px 0;
+.appartement-info,
+.user p,
+.collapse-content2{
+    color: var(--primaryColor);
 }
 
 .user-info,
@@ -12,7 +14,28 @@
 .user-info,
 .collapse-content1{
     justify-content: var(--spaceBetween);
+}
 
+.collapse-content1{
+    padding: 10px;
+    order: 2;
+    color: var(--secondaryColor);
+    background-color: var(--primaryColor);
+    border-radius: var(--borderRadiusSmall);
+}
+
+.collapse-content2{
+    padding: 10px;
+    height: 196.35px;
+    border-radius: 0 0 10px 10px;
+    line-height: var(--line-height1);
+    font-weight: var(--fontWeight4);
+    font-size: var(--fontSize12);
+    background-color: var(--secondaryColor);
+}
+
+.collapse-content2 ul{
+    padding:0;
 }
 
 .flex-mobile{
@@ -25,38 +48,13 @@
     order: 2;
 }
 
-.collapse-content1{
-    color: var(--secondaryColor);
-    padding: 10px;
-    background-color: var(--primaryColor);
-    order: 2;
-}
-
-.collapse-content2{
-    height: 142.35px;
-    padding: 10px;
-    line-height: 17.11px;
-    font-weight: 400;
-    font-size: 12px;
-    background-color: var(--secondaryColor);
-}
-
-.collapse-content1,
-.collapse-content2{
-    border-radius: var(--borderRadiusSmall);
-}
-
 .user{
     order: 2;
     text-align: end;
     justify-content: end;
-    align-items: center;
+    align-items: var(--aligneItems);
     width: 50px;
     height: 50px;
-}
-
-.user p{
-    margin:0 10px
 }
 
 .user img{
@@ -72,13 +70,21 @@
     color: var(--primaryColor);
 }
 
-.appartement-info,
-.user p,
-.collapse-content2{
-    color: var(--primaryColor);
+.user p{
+    margin:0 10px
+}
+
+.item-collapse{
+    margin: 10px 0;
 }
 
 /************************MEDIA QUERY*****************************************/
+@media screen and (min-width:768px){
+    .collapse-content2, .collapse-content2{
+        font-size: var(--fontSize14);
+    }
+}
+
 @media screen and (min-width:1024px){
     .collapses{
         display: var(--flex);
@@ -90,13 +96,14 @@
     }
 
     .collapse-content1{
-        font-size: 24px;
+        font-size: var(--fontSize16)
     }
 
     .collapse-content2{
         border-radius: 0 0 10px 10px;
-        font-size: 24px;
-        line-height: 31px;
+        font-size: var(--fontSize16);
+        line-height: var( --line-height2);
+        height: 84%;
     }
 
     .user-info{
